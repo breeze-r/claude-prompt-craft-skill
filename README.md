@@ -44,14 +44,23 @@ Trigger it by asking Claude to *write*, *optimize*, *review*, or *restructure* a
 
 这是一个标准的 Claude Code skill，目录结构为 `skills/prompt-craft/SKILL.md`。
 
+仓库提供两个语言版本，任选其一（也可都装）：
+- `skills/prompt-craft` — 中文版
+- `skills/prompt-craft-en` — English version
+
+The repo ships two language variants — pick either (or install both):
+- `skills/prompt-craft` — Chinese
+- `skills/prompt-craft-en` — English
+
 ```bash
 # 1. 克隆仓库 / Clone
-git clone https://github.com/<your-name>/claude-prompt-craft-skill.git
+git clone https://github.com/breeze-r/claude-prompt-craft-skill.git
 
 # 2. 把 skill 放进 Claude 的 skills 目录 / Copy into your skills dir
 #    Windows:  %USERPROFILE%\.claude\skills\
 #    macOS/Linux: ~/.claude/skills/
-cp -r claude-prompt-craft-skill/skills/prompt-craft ~/.claude/skills/
+cp -r claude-prompt-craft-skill/skills/prompt-craft ~/.claude/skills/      # 中文 / Chinese
+cp -r claude-prompt-craft-skill/skills/prompt-craft-en ~/.claude/skills/   # English
 ```
 
 放好后，在 Claude / Claude Code 里正常对话即可自动触发（skill 靠描述里的关键词匹配）。
@@ -100,8 +109,10 @@ claude-prompt-craft-skill/
 ├── README.md
 ├── LICENSE
 └── skills/
-    └── prompt-craft/
-        └── SKILL.md      # 方法论本体 / the skill itself
+    ├── prompt-craft/
+    │   └── SKILL.md      # 中文版 / Chinese version
+    └── prompt-craft-en/
+        └── SKILL.md      # 英文版 / English version
 ```
 
 ---
